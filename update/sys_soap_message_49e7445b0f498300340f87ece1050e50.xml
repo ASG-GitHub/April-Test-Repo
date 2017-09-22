@@ -1,0 +1,2055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message">
+    <sys_soap_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description/>
+        <download_wsdl>false</download_wsdl>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <name>April TEST - AD Group Users</name>
+        <protocol_profile/>
+        <sys_class_name>sys_soap_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-11 22:17:22</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>49e7445b0f498300340f87ece1050e50</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>April TEST - AD Group Users</sys_name>
+        <sys_package display_value="Apprentice Tracking Program" source="x_113255_apprentic">754befb90fc10300340f87ece1050e39</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprentice Tracking Program">754befb90fc10300340f87ece1050e39</sys_scope>
+        <sys_update_name>sys_soap_message_49e7445b0f498300340f87ece1050e50</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-12 01:34:18</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <wsdl/>
+        <wsdl_xml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://sesoams1:8100/SS" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://sesoams1:8100/SS" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+
+
+<wsdl:types>
+
+
+<s:schema targetNamespace="http://sesoams1:8100/SS" elementFormDefault="qualified">
+
+
+<s:element name="GetUsersInGroup">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sGroupName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetUsersInGroupResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="PSEUsersList" type="tns:PSEUsersList" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:complexType name="PSEUsersList">
+
+
+<s:sequence>
+
+<s:element name="PSEUsersList" type="tns:ArrayOfPSEUsersListItem" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+<s:complexType name="ArrayOfPSEUsersListItem">
+
+
+<s:sequence>
+
+<s:element name="User" type="tns:PSEUsersListItem" maxOccurs="unbounded" minOccurs="0" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+<s:complexType name="PSEUsersListItem">
+
+
+<s:sequence>
+
+<s:element name="DisplayName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="FirstName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="LastName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+<s:attribute name="Login" type="s:string"/>
+
+</s:complexType>
+
+
+<s:element name="GetUserInfo">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sUserLogin" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetUserInfoResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="PSE_x0020_User" type="tns:PSEUser" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:complexType name="PSEUser">
+
+
+<s:sequence>
+
+<s:element name="UserName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PhoneNumber" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="EmailAddress" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="EmployeeID" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PrimaryGroup" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PrimaryGroupID" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="HomeDirectory" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Title" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="CN" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="FacsimileTelephoneNumber" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Description" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PhysicalDeliveryOfficeName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Department" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="IsAccountLocked" type="s:boolean" maxOccurs="1" minOccurs="1"/>
+
+<s:element name="LockoutTime" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="NTGroups" type="tns:ArrayOfString" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+<s:attribute name="Login" type="s:string"/>
+
+</s:complexType>
+
+
+<s:complexType name="ArrayOfString">
+
+
+<s:sequence>
+
+<s:element name="GroupName" type="s:string" maxOccurs="unbounded" minOccurs="0" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+<s:element name="GetPSEPhoneInfo">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sUserLogin" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetPSEPhoneInfoResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="PSE_x0020_Phone_x0020_Data" type="tns:PSEPhone" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:complexType name="PSEPhone">
+
+
+<s:sequence>
+
+<s:element name="EmployeeID" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Email" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="StatusCode" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="LastName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="FirstName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="MiddleInitial" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Aka" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="InternalPhone" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="ExternalPhone" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="FaxNumber" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="MailStop" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="JobTitle" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="OrgUnit" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="CostCenter" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="DrctRptEe_nbr" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PersonnelType" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="BuildingCode" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="ContactCode" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+<s:attribute name="Login" type="s:string"/>
+
+</s:complexType>
+
+
+<s:element name="GetPSEPhoneDataByUserNumber">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sUserNumber" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetPSEPhoneDataByUserNumberResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="PSE_x0020_Phone_x0020_Data" type="tns:PSEPhone" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetPSEPhoneDataByUserName">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sUserName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="bSortByLast" type="s:boolean" maxOccurs="1" minOccurs="1"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetPSEPhoneDataByUserNameResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="PSEUsersList" type="tns:PSEUsersList" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetLoginList">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sFilter" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetLoginListResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="PSEUsersList" type="tns:PSEUsersList" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetGroupList">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sFilter" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetGroupListResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="GetGroupListResult" type="tns:ArrayOfAnyType" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:complexType name="ArrayOfAnyType">
+
+
+<s:sequence>
+
+<s:element name="anyType" maxOccurs="unbounded" minOccurs="0" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+<s:element name="GetLockedUsers">
+
+<s:complexType/>
+
+</s:element>
+
+
+<s:complexType name="PSELockedUsersList">
+
+
+<s:sequence>
+
+<s:element name="PSELockedUsersList" type="tns:ArrayOfPSEUsersLockedListItem" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+<s:complexType name="ArrayOfPSEUsersLockedListItem">
+
+
+<s:sequence>
+
+<s:element name="LockedUser" type="tns:PSEUsersLockedListItem" maxOccurs="unbounded" minOccurs="0" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+<s:complexType name="PSEUsersLockedListItem">
+
+
+<s:sequence>
+
+<s:element name="DisplayName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="DateLocked" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+<s:attribute name="Login" type="s:string"/>
+
+</s:complexType>
+
+
+<s:element name="GetLockedUsersResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="PSELockedUsersList" type="tns:PSELockedUsersList" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="ValidateUserIsInGroup">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sGroupName" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="sUserLogin" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="ValidateUserIsInGroupResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="ValidateUserIsInGroupResult" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+<s:element name="PSEUsersList" type="tns:PSEUsersList" nillable="true"/>
+
+<s:element name="PSE_x0020_User" type="tns:PSEUser" nillable="true"/>
+
+<s:element name="PSE_x0020_Phone_x0020_Data" type="tns:PSEPhone" nillable="true"/>
+
+<s:element name="ArrayOfAnyType" type="tns:ArrayOfAnyType" nillable="true"/>
+
+<s:element name="PSELockedUsersList" type="tns:PSELockedUsersList" nillable="true"/>
+
+<s:element name="string" type="s:string" nillable="true"/>
+
+</s:schema>
+
+</wsdl:types>
+
+
+<wsdl:message name="GetUsersInGroupSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetUsersInGroup"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUsersInGroupSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetUsersInGroupResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUserInfoSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetUserInfo"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUserInfoSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetUserInfoResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneInfoSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetPSEPhoneInfo"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneInfoSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetPSEPhoneInfoResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNumberSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetPSEPhoneDataByUserNumber"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNumberSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetPSEPhoneDataByUserNumberResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNameSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetPSEPhoneDataByUserName"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNameSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetPSEPhoneDataByUserNameResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetLoginListSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetLoginList"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetLoginListSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetLoginListResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetGroupListSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetGroupList"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetGroupListSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetGroupListResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetLockedUsersSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetLockedUsers"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetLockedUsersSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetLockedUsersResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="ValidateUserIsInGroupSoapIn">
+
+<wsdl:part name="parameters" element="tns:ValidateUserIsInGroup"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="ValidateUserIsInGroupSoapOut">
+
+<wsdl:part name="parameters" element="tns:ValidateUserIsInGroupResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUsersInGroupHttpGetIn">
+
+<wsdl:part name="sGroupName" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUsersInGroupHttpGetOut">
+
+<wsdl:part name="Body" element="tns:PSEUsersList"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUserInfoHttpGetIn">
+
+<wsdl:part name="sUserLogin" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUserInfoHttpGetOut">
+
+<wsdl:part name="Body" element="tns:PSE_x0020_User"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneInfoHttpGetIn">
+
+<wsdl:part name="sUserLogin" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneInfoHttpGetOut">
+
+<wsdl:part name="Body" element="tns:PSE_x0020_Phone_x0020_Data"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNumberHttpGetIn">
+
+<wsdl:part name="sUserNumber" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNumberHttpGetOut">
+
+<wsdl:part name="Body" element="tns:PSE_x0020_Phone_x0020_Data"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNameHttpGetIn">
+
+<wsdl:part name="sUserName" type="s:string"/>
+
+<wsdl:part name="bSortByLast" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNameHttpGetOut">
+
+<wsdl:part name="Body" element="tns:PSEUsersList"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetLoginListHttpGetIn">
+
+<wsdl:part name="sFilter" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetLoginListHttpGetOut">
+
+<wsdl:part name="Body" element="tns:PSEUsersList"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetGroupListHttpGetIn">
+
+<wsdl:part name="sFilter" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetGroupListHttpGetOut">
+
+<wsdl:part name="Body" element="tns:ArrayOfAnyType"/>
+
+</wsdl:message>
+
+<wsdl:message name="GetLockedUsersHttpGetIn"/>
+
+
+<wsdl:message name="GetLockedUsersHttpGetOut">
+
+<wsdl:part name="Body" element="tns:PSELockedUsersList"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="ValidateUserIsInGroupHttpGetIn">
+
+<wsdl:part name="sGroupName" type="s:string"/>
+
+<wsdl:part name="sUserLogin" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="ValidateUserIsInGroupHttpGetOut">
+
+<wsdl:part name="Body" element="tns:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUsersInGroupHttpPostIn">
+
+<wsdl:part name="sGroupName" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUsersInGroupHttpPostOut">
+
+<wsdl:part name="Body" element="tns:PSEUsersList"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUserInfoHttpPostIn">
+
+<wsdl:part name="sUserLogin" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetUserInfoHttpPostOut">
+
+<wsdl:part name="Body" element="tns:PSE_x0020_User"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneInfoHttpPostIn">
+
+<wsdl:part name="sUserLogin" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneInfoHttpPostOut">
+
+<wsdl:part name="Body" element="tns:PSE_x0020_Phone_x0020_Data"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNumberHttpPostIn">
+
+<wsdl:part name="sUserNumber" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNumberHttpPostOut">
+
+<wsdl:part name="Body" element="tns:PSE_x0020_Phone_x0020_Data"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNameHttpPostIn">
+
+<wsdl:part name="sUserName" type="s:string"/>
+
+<wsdl:part name="bSortByLast" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetPSEPhoneDataByUserNameHttpPostOut">
+
+<wsdl:part name="Body" element="tns:PSEUsersList"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetLoginListHttpPostIn">
+
+<wsdl:part name="sFilter" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetLoginListHttpPostOut">
+
+<wsdl:part name="Body" element="tns:PSEUsersList"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetGroupListHttpPostIn">
+
+<wsdl:part name="sFilter" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetGroupListHttpPostOut">
+
+<wsdl:part name="Body" element="tns:ArrayOfAnyType"/>
+
+</wsdl:message>
+
+<wsdl:message name="GetLockedUsersHttpPostIn"/>
+
+
+<wsdl:message name="GetLockedUsersHttpPostOut">
+
+<wsdl:part name="Body" element="tns:PSELockedUsersList"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="ValidateUserIsInGroupHttpPostIn">
+
+<wsdl:part name="sGroupName" type="s:string"/>
+
+<wsdl:part name="sUserLogin" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="ValidateUserIsInGroupHttpPostOut">
+
+<wsdl:part name="Body" element="tns:string"/>
+
+</wsdl:message>
+
+
+<wsdl:portType name="SSSoap">
+
+
+<wsdl:operation name="GetUsersInGroup">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return list of all users in a specified NT Domain Group.</wsdl:documentation>
+
+<wsdl:input message="tns:GetUsersInGroupSoapIn"/>
+
+<wsdl:output message="tns:GetUsersInGroupSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetUserInfo">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return basic user information and list of groups for specified user. (Puget domain is assumed, don't include "puget\")</wsdl:documentation>
+
+<wsdl:input message="tns:GetUserInfoSoapIn"/>
+
+<wsdl:output message="tns:GetUserInfoSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneInfo">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return basic user information from PSE Phone database. (User info shown on PSE Web)</wsdl:documentation>
+
+<wsdl:input message="tns:GetPSEPhoneInfoSoapIn"/>
+
+<wsdl:output message="tns:GetPSEPhoneInfoSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserNumber">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return basic user information from PSE Phone database from user number. (User info shown on PSE Web, user number must have leading zero's)</wsdl:documentation>
+
+<wsdl:input message="tns:GetPSEPhoneDataByUserNumberSoapIn"/>
+
+<wsdl:output message="tns:GetPSEPhoneDataByUserNumberSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserName">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List of users from wild card search on name (or part of name)</wsdl:documentation>
+
+<wsdl:input message="tns:GetPSEPhoneDataByUserNameSoapIn"/>
+
+<wsdl:output message="tns:GetPSEPhoneDataByUserNameSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLoginList">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return list of users that match specified entry. (Uses wild cards, i.e. "js*" returns all logins that start with "JS")</wsdl:documentation>
+
+<wsdl:input message="tns:GetLoginListSoapIn"/>
+
+<wsdl:output message="tns:GetLoginListSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetGroupList">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return list of groups that match specified entry. (Uses wild cards, i.e. "AMS*" returns all groups that start with "AMS")</wsdl:documentation>
+
+<wsdl:input message="tns:GetGroupListSoapIn"/>
+
+<wsdl:output message="tns:GetGroupListSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLockedUsers">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of all puget users that are currently locked.</wsdl:documentation>
+
+<wsdl:input message="tns:GetLockedUsersSoapIn"/>
+
+<wsdl:output message="tns:GetLockedUsersSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="ValidateUserIsInGroup">
+
+<wsdl:input message="tns:ValidateUserIsInGroupSoapIn"/>
+
+<wsdl:output message="tns:ValidateUserIsInGroupSoapOut"/>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+<wsdl:portType name="SSHttpGet">
+
+
+<wsdl:operation name="GetUsersInGroup">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return list of all users in a specified NT Domain Group.</wsdl:documentation>
+
+<wsdl:input message="tns:GetUsersInGroupHttpGetIn"/>
+
+<wsdl:output message="tns:GetUsersInGroupHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetUserInfo">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return basic user information and list of groups for specified user. (Puget domain is assumed, don't include "puget\")</wsdl:documentation>
+
+<wsdl:input message="tns:GetUserInfoHttpGetIn"/>
+
+<wsdl:output message="tns:GetUserInfoHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneInfo">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return basic user information from PSE Phone database. (User info shown on PSE Web)</wsdl:documentation>
+
+<wsdl:input message="tns:GetPSEPhoneInfoHttpGetIn"/>
+
+<wsdl:output message="tns:GetPSEPhoneInfoHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserNumber">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return basic user information from PSE Phone database from user number. (User info shown on PSE Web, user number must have leading zero's)</wsdl:documentation>
+
+<wsdl:input message="tns:GetPSEPhoneDataByUserNumberHttpGetIn"/>
+
+<wsdl:output message="tns:GetPSEPhoneDataByUserNumberHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserName">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List of users from wild card search on name (or part of name)</wsdl:documentation>
+
+<wsdl:input message="tns:GetPSEPhoneDataByUserNameHttpGetIn"/>
+
+<wsdl:output message="tns:GetPSEPhoneDataByUserNameHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLoginList">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return list of users that match specified entry. (Uses wild cards, i.e. "js*" returns all logins that start with "JS")</wsdl:documentation>
+
+<wsdl:input message="tns:GetLoginListHttpGetIn"/>
+
+<wsdl:output message="tns:GetLoginListHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetGroupList">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return list of groups that match specified entry. (Uses wild cards, i.e. "AMS*" returns all groups that start with "AMS")</wsdl:documentation>
+
+<wsdl:input message="tns:GetGroupListHttpGetIn"/>
+
+<wsdl:output message="tns:GetGroupListHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLockedUsers">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of all puget users that are currently locked.</wsdl:documentation>
+
+<wsdl:input message="tns:GetLockedUsersHttpGetIn"/>
+
+<wsdl:output message="tns:GetLockedUsersHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="ValidateUserIsInGroup">
+
+<wsdl:input message="tns:ValidateUserIsInGroupHttpGetIn"/>
+
+<wsdl:output message="tns:ValidateUserIsInGroupHttpGetOut"/>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+<wsdl:portType name="SSHttpPost">
+
+
+<wsdl:operation name="GetUsersInGroup">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return list of all users in a specified NT Domain Group.</wsdl:documentation>
+
+<wsdl:input message="tns:GetUsersInGroupHttpPostIn"/>
+
+<wsdl:output message="tns:GetUsersInGroupHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetUserInfo">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return basic user information and list of groups for specified user. (Puget domain is assumed, don't include "puget\")</wsdl:documentation>
+
+<wsdl:input message="tns:GetUserInfoHttpPostIn"/>
+
+<wsdl:output message="tns:GetUserInfoHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneInfo">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return basic user information from PSE Phone database. (User info shown on PSE Web)</wsdl:documentation>
+
+<wsdl:input message="tns:GetPSEPhoneInfoHttpPostIn"/>
+
+<wsdl:output message="tns:GetPSEPhoneInfoHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserNumber">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return basic user information from PSE Phone database from user number. (User info shown on PSE Web, user number must have leading zero's)</wsdl:documentation>
+
+<wsdl:input message="tns:GetPSEPhoneDataByUserNumberHttpPostIn"/>
+
+<wsdl:output message="tns:GetPSEPhoneDataByUserNumberHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserName">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">List of users from wild card search on name (or part of name)</wsdl:documentation>
+
+<wsdl:input message="tns:GetPSEPhoneDataByUserNameHttpPostIn"/>
+
+<wsdl:output message="tns:GetPSEPhoneDataByUserNameHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLoginList">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return list of users that match specified entry. (Uses wild cards, i.e. "js*" returns all logins that start with "JS")</wsdl:documentation>
+
+<wsdl:input message="tns:GetLoginListHttpPostIn"/>
+
+<wsdl:output message="tns:GetLoginListHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetGroupList">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return list of groups that match specified entry. (Uses wild cards, i.e. "AMS*" returns all groups that start with "AMS")</wsdl:documentation>
+
+<wsdl:input message="tns:GetGroupListHttpPostIn"/>
+
+<wsdl:output message="tns:GetGroupListHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLockedUsers">
+
+<wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of all puget users that are currently locked.</wsdl:documentation>
+
+<wsdl:input message="tns:GetLockedUsersHttpPostIn"/>
+
+<wsdl:output message="tns:GetLockedUsersHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="ValidateUserIsInGroup">
+
+<wsdl:input message="tns:ValidateUserIsInGroupHttpPostIn"/>
+
+<wsdl:output message="tns:ValidateUserIsInGroupHttpPostOut"/>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+<wsdl:binding name="SSSoap" type="tns:SSSoap">
+
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+
+
+<wsdl:operation name="GetUsersInGroup">
+
+<soap:operation style="document" soapAction="http://sesoams1:8100/SS/GetUsersInGroup"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetUserInfo">
+
+<soap:operation style="document" soapAction="http://sesoams1:8100/SS/GetUserInfo"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneInfo">
+
+<soap:operation style="document" soapAction="http://sesoams1:8100/SS/GetPSEPhoneInfo"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserNumber">
+
+<soap:operation style="document" soapAction="http://sesoams1:8100/SS/GetPSEPhoneDataByUserNumber"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserName">
+
+<soap:operation style="document" soapAction="http://sesoams1:8100/SS/GetPSEPhoneDataByUserName"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLoginList">
+
+<soap:operation style="document" soapAction="http://sesoams1:8100/SS/GetLoginList"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetGroupList">
+
+<soap:operation style="document" soapAction="http://sesoams1:8100/SS/GetGroupList"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLockedUsers">
+
+<soap:operation style="document" soapAction="http://sesoams1:8100/SS/GetLockedUsers"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="ValidateUserIsInGroup">
+
+<soap:operation style="document" soapAction="http://sesoams1:8100/SS/ValidateUserIsInGroup"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:binding name="SSSoap12" type="tns:SSSoap">
+
+<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+
+
+<wsdl:operation name="GetUsersInGroup">
+
+<soap12:operation style="document" soapAction="http://sesoams1:8100/SS/GetUsersInGroup"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetUserInfo">
+
+<soap12:operation style="document" soapAction="http://sesoams1:8100/SS/GetUserInfo"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneInfo">
+
+<soap12:operation style="document" soapAction="http://sesoams1:8100/SS/GetPSEPhoneInfo"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserNumber">
+
+<soap12:operation style="document" soapAction="http://sesoams1:8100/SS/GetPSEPhoneDataByUserNumber"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserName">
+
+<soap12:operation style="document" soapAction="http://sesoams1:8100/SS/GetPSEPhoneDataByUserName"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLoginList">
+
+<soap12:operation style="document" soapAction="http://sesoams1:8100/SS/GetLoginList"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetGroupList">
+
+<soap12:operation style="document" soapAction="http://sesoams1:8100/SS/GetGroupList"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLockedUsers">
+
+<soap12:operation style="document" soapAction="http://sesoams1:8100/SS/GetLockedUsers"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="ValidateUserIsInGroup">
+
+<soap12:operation style="document" soapAction="http://sesoams1:8100/SS/ValidateUserIsInGroup"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:binding name="SSHttpGet" type="tns:SSHttpGet">
+
+<http:binding verb="GET"/>
+
+
+<wsdl:operation name="GetUsersInGroup">
+
+<http:operation location="/GetUsersInGroup"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetUserInfo">
+
+<http:operation location="/GetUserInfo"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneInfo">
+
+<http:operation location="/GetPSEPhoneInfo"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserNumber">
+
+<http:operation location="/GetPSEPhoneDataByUserNumber"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserName">
+
+<http:operation location="/GetPSEPhoneDataByUserName"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLoginList">
+
+<http:operation location="/GetLoginList"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetGroupList">
+
+<http:operation location="/GetGroupList"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLockedUsers">
+
+<http:operation location="/GetLockedUsers"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="ValidateUserIsInGroup">
+
+<http:operation location="/ValidateUserIsInGroup"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:binding name="SSHttpPost" type="tns:SSHttpPost">
+
+<http:binding verb="POST"/>
+
+
+<wsdl:operation name="GetUsersInGroup">
+
+<http:operation location="/GetUsersInGroup"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetUserInfo">
+
+<http:operation location="/GetUserInfo"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneInfo">
+
+<http:operation location="/GetPSEPhoneInfo"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserNumber">
+
+<http:operation location="/GetPSEPhoneDataByUserNumber"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetPSEPhoneDataByUserName">
+
+<http:operation location="/GetPSEPhoneDataByUserName"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLoginList">
+
+<http:operation location="/GetLoginList"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetGroupList">
+
+<http:operation location="/GetGroupList"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetLockedUsers">
+
+<http:operation location="/GetLockedUsers"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="ValidateUserIsInGroup">
+
+<http:operation location="/ValidateUserIsInGroup"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:service name="SS">
+
+
+<wsdl:port name="SSSoap" binding="tns:SSSoap">
+
+<soap:address location="http://spbotims01v02:8100/SS.asmx"/>
+
+</wsdl:port>
+
+
+<wsdl:port name="SSSoap12" binding="tns:SSSoap12">
+
+<soap12:address location="http://spbotims01v02:8100/SS.asmx"/>
+
+</wsdl:port>
+
+
+<wsdl:port name="SSHttpGet" binding="tns:SSHttpGet">
+
+<http:address location="http://spbotims01v02:8100/SS.asmx"/>
+
+</wsdl:port>
+
+
+<wsdl:port name="SSHttpPost" binding="tns:SSHttpPost">
+
+<http:address location="http://spbotims01v02:8100/SS.asmx"/>
+
+</wsdl:port>
+
+</wsdl:service>
+
+</wsdl:definitions>]]></wsdl_xml>
+    </sys_soap_message>
+</record_update>

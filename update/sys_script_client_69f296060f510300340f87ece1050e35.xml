@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Populate User Data (Title, Location, Approver) On Username Change</description>
+        <field>user</field>
+        <global>true</global>
+        <messages/>
+        <name>Populate UserData On Username Change</name>
+        <order/>
+        <script><![CDATA[//on form load, new record --> populate the new data based on current username
+//on form load, existing record --> no change, existing data
+//
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	 if (newValue == '') {	
+		 return;
+	 }
+		   
+	 
+	
+	 if (isLoading && !g_form.isNewRecord()) {
+		 var strUserTitle = g_form.getValue('title'); 
+		 var strUserLocation = g_form.getValue('location'); 
+		 var strUserApproval = g_form.getValue('approval'); 
+		
+		 g_form.setValue('title', strUserTitle);
+		 g_form.setValue('location', strUserLocation);
+		 g_form.setValue('approval', strUserApproval);
+	 } else {
+	   var recCurrentUser = g_form.getReference('user', setUserData);	   
+	 } 
+		 
+	
+	function setUserData(recCurrentUser){
+		   if (recCurrentUser) {
+			   g_form.setValue('title', recCurrentUser.title);
+			   g_form.setValue('location', recCurrentUser.first_name); 
+			   g_form.setValue('approver', recCurrentUser.email); 
+		   }  
+	}
+	
+	
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 21:28:12</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>69f296060f510300340f87ece1050e35</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Populate UserData On Username Change</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apprentice Tracking Program" source="x_113255_apprentic">754befb90fc10300340f87ece1050e39</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprentice Tracking Program">754befb90fc10300340f87ece1050e39</sys_scope>
+        <sys_update_name>sys_script_client_69f296060f510300340f87ece1050e35</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 22:34:38</sys_updated_on>
+        <table>x_113255_apprentic_apprentice_time_sheet</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="task" table="x_113255_apprentic_apprentice_time_card" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>Wireman</dependent_value>
+            <element>task</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>GC - Climbing</label>
+            <language>en</language>
+            <name>x_113255_apprentic_apprentice_time_card</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-21 16:20:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d187d61e0f990300340f87ece1050eec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-21 16:20:54</sys_updated_on>
+            <value>GC</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>CT</dependent_value>
+            <element>task</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ICE - Internal Combustion Engines</label>
+            <language>en</language>
+            <name>x_113255_apprentic_apprentice_time_card</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-21 16:23:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2c081e1e0f990300340f87ece1050ec5</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-21 16:23:45</sys_updated_on>
+            <value>ICE</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>Wireman</dependent_value>
+            <element>task</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MISC – Miscellaneous</label>
+            <language>en</language>
+            <name>x_113255_apprentic_apprentice_time_card</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-21 16:20:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>81579a1e0f990300340f87ece1050edd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-21 16:20:14</sys_updated_on>
+            <value>MISC</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>Meterman</dependent_value>
+            <element>task</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MISC – Safety meetings etc</label>
+            <language>en</language>
+            <name>x_113255_apprentic_apprentice_time_card</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-21 16:22:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c697de520fd50300340f87ece1050e7f</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-21 16:22:23</sys_updated_on>
+            <value>MISC</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>CT</dependent_value>
+            <element>task</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OPS - Operations</label>
+            <language>en</language>
+            <name>x_113255_apprentic_apprentice_time_card</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-21 16:24:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>76281e1e0f990300340f87ece1050ec6</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-21 16:25:35</sys_updated_on>
+            <value>OPS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>Meterman</dependent_value>
+            <element>task</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>POS – Power Quality School</label>
+            <language>en</language>
+            <name>x_113255_apprentic_apprentice_time_card</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-21 16:22:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f0d75a520fd50300340f87ece1050ee7</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-21 16:23:01</sys_updated_on>
+            <value>POS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>CT</dependent_value>
+            <element>task</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TE - TESTING</label>
+            <language>en</language>
+            <name>x_113255_apprentic_apprentice_time_card</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-21 17:46:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2b1bae960fd90300340f87ece1050ed2</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-21 17:47:22</sys_updated_on>
+            <value>TEST</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>task</element>
+            <name>x_113255_apprentic_apprentice_time_card</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-21 16:20:14</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>cb671ada0f990300340f87ece1050ef7</sys_id>
+            <sys_mod_count>17</sys_mod_count>
+            <sys_name>task</sys_name>
+            <sys_package display_value="Apprentice Tracking Program" source="x_113255_apprentic">754befb90fc10300340f87ece1050e39</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Apprentice Tracking Program">754befb90fc10300340f87ece1050e39</sys_scope>
+            <sys_update_name>sys_choice_x_113255_apprentic_apprentice_time_card_task</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-21 17:47:22</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

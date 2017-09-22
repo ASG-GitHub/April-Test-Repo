@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Apprentice Time Card" max_length="40" name="x_113255_apprentic_apprentice_time_card" type="collection">
+        <element choice="3" dependent="time_sheet.u_craft" dependent_on_field="time_sheet.u_craft" label="Task Type" mandatory="true" max_length="100" name="task" type="string" use_dependent_field="true">
+            <choice>
+                <element dependent_value="Wireman" label="GC - Climbing" value="GC"/>
+                <element dependent_value="CT" label="ICE - Internal Combustion Engines" value="ICE"/>
+                <element dependent_value="Wireman" label="MISC – Miscellaneous" value="MISC"/>
+                <element dependent_value="Meterman" label="MISC – Safety meetings etc" value="MISC"/>
+                <element dependent_value="CT" label="OPS - Operations" value="OPS"/>
+                <element dependent_value="Meterman" label="POS – Power Quality School" value="POS"/>
+                <element dependent_value="CT" label="TE - TESTING" value="TEST"/>
+            </choice>
+        </element>
+        <element label="Time Sheet" max_length="32" name="time_sheet" reference="x_113255_apprentic_apprentice_time_sheet" type="reference"/>
+        <element label="Hour" max_length="15" name="total" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="RSI addition fields" max_length="40" name="u_string_4" type="string"/>
+        <index name="index">
+            <element name="time_sheet"/>
+        </index>
+    </element>
+</database>

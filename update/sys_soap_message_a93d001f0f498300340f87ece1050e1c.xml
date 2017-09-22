@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message">
+    <sys_soap_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description/>
+        <download_wsdl>false</download_wsdl>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <name>April SOAP call testing 2</name>
+        <protocol_profile/>
+        <sys_class_name>sys_soap_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-11 22:36:48</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a93d001f0f498300340f87ece1050e1c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>April SOAP call testing 2</sys_name>
+        <sys_package display_value="Apprentice Tracking Program" source="x_113255_apprentic">754befb90fc10300340f87ece1050e39</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprentice Tracking Program">754befb90fc10300340f87ece1050e39</sys_scope>
+        <sys_update_name>sys_soap_message_a93d001f0f498300340f87ece1050e1c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-11 22:44:27</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <wsdl/>
+        <wsdl_xml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="SAPWO" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tns="SAPWO" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+
+
+<wsdl:types>
+
+
+<s:schema targetNamespace="SAPWO" elementFormDefault="qualified">
+
+
+<s:element name="GetSAPWOData">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="SAPWONumber" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetSAPWODataResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="SAPData" type="tns:RFC_Connector" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:complexType name="RFC_Connector">
+
+
+<s:sequence>
+
+<s:element name="IsFound" type="s:boolean" maxOccurs="1" minOccurs="1"/>
+
+<s:element name="OrderNumber" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="LeadOrder" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="AssociatedOrders" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="LocationNumber" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="MapNumber" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Address" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Status_User" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Notifications" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="DistributionType" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="OrderType" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="WBSElement" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="Primavera" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="PrimaryNotification" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+<s:element name="GetFullSAPWOData">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sOrderNumber" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="sStartDate" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="sEndDate" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="sStartTime" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="sEndTime" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+<s:element name="iMaxRecords" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetFullSAPWODataResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="FullSAPData" type="tns:RFC_ConnectorFullOutput" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:complexType name="RFC_ConnectorFullOutput">
+
+
+<s:sequence>
+
+<s:element name="RecordsCount" type="s:int" maxOccurs="1" minOccurs="1"/>
+
+<s:element name="OrderTable" type="tns:ZISRFCIMGORDER" maxOccurs="unbounded" minOccurs="0"/>
+
+<s:element name="AssociatedOrders" type="tns:ZISRFCIMGASSCORDER" maxOccurs="unbounded" minOccurs="0"/>
+
+<s:element name="Notifications" type="tns:ZISRFCIMGNOTIFS" maxOccurs="unbounded" minOccurs="0"/>
+
+<s:element name="Ordobj" type="tns:ZISRFCIMGOBJ" maxOccurs="unbounded" minOccurs="0"/>
+
+<s:element name="Char" type="tns:ZISRFCIMGCHAR" maxOccurs="unbounded" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+<s:complexType name="ZISRFCIMGORDER">
+
+
+<s:complexContent mixed="false">
+
+
+<s:extension base="tns:SAPStructure">
+
+
+<s:sequence>
+
+<s:element name="AUFNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="FOUND_ORDER" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="LEAD_AUFNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="AUART" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="ATXT" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="ATYPE" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="LOEKZ" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="AEDAT" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="KTEXT" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="REVNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="POSID" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="POSKI" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="POST1" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="USR02" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="TPLNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="SYS_STATUS" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="USR_STATUS" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="VAPLZ" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="GSTRP" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="GLTRP" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="ILART" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="ILATX" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+</s:sequence>
+
+</s:extension>
+
+</s:complexContent>
+
+</s:complexType>
+
+<s:complexType name="SAPStructure" abstract="true"/>
+
+
+<s:complexType name="ZISRFCIMGCHAR">
+
+
+<s:complexContent mixed="false">
+
+
+<s:extension base="tns:SAPStructure">
+
+
+<s:sequence>
+
+<s:element name="AUFNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="QMNUM" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="FRKLS" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="ATNAM" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="ATWRT" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+</s:sequence>
+
+</s:extension>
+
+</s:complexContent>
+
+</s:complexType>
+
+
+<s:complexType name="ZISRFCIMGOBJ">
+
+
+<s:complexContent mixed="false">
+
+
+<s:extension base="tns:SAPStructure">
+
+
+<s:sequence>
+
+<s:element name="AUFNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="TPLNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+</s:sequence>
+
+</s:extension>
+
+</s:complexContent>
+
+</s:complexType>
+
+
+<s:complexType name="ZISRFCIMGNOTIFS">
+
+
+<s:complexContent mixed="false">
+
+
+<s:extension base="tns:SAPStructure">
+
+
+<s:sequence>
+
+<s:element name="AUFNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="QMNUM" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="MNCOD" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="ERLDAT" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="TPLNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="FETXT" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+</s:sequence>
+
+</s:extension>
+
+</s:complexContent>
+
+</s:complexType>
+
+
+<s:complexType name="ZISRFCIMGASSCORDER">
+
+
+<s:complexContent mixed="false">
+
+
+<s:extension base="tns:SAPStructure">
+
+
+<s:sequence>
+
+<s:element name="LEAD_AUFNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="MAUFNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="AUFNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+</s:sequence>
+
+</s:extension>
+
+</s:complexContent>
+
+</s:complexType>
+
+
+<s:element name="GetFullLocData">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sLocations" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetFullLocDataResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="LocationData" type="tns:RFC_LocationData" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:complexType name="RFC_LocationData">
+
+
+<s:sequence>
+
+<s:element name="FuncLoc" type="tns:ZISRFCIMGFL" maxOccurs="unbounded" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+<s:complexType name="ZISRFCIMGFL">
+
+
+<s:complexContent mixed="false">
+
+
+<s:extension base="tns:SAPStructure">
+
+
+<s:sequence>
+
+<s:element name="TPLNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="FOUND_FL" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="IMG_ACTV" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="PLTXT" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="EQART" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="SYS_STATUS" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="USR_STATUS" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="TPLMA" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="MSGRP" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="EQFNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="NAME1" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="NAME2" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="CITY1" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="STREET" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="POST_CODE1" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="COUNTRY" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="REGION" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="TEL_NUMBER" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="FAX_NUMBER" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+</s:sequence>
+
+</s:extension>
+
+</s:complexContent>
+
+</s:complexType>
+
+
+<s:element name="GetFullEQData">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="sEQs" type="s:string" maxOccurs="1" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:element name="GetFullEQDataResponse">
+
+
+<s:complexType>
+
+
+<s:sequence>
+
+<s:element name="EquipmentData" type="tns:RFC_EquipmentData" maxOccurs="1" minOccurs="1" nillable="true"/>
+
+</s:sequence>
+
+</s:complexType>
+
+</s:element>
+
+
+<s:complexType name="RFC_EquipmentData">
+
+
+<s:sequence>
+
+<s:element name="EQLoc" type="tns:ZISRFCIMGEQ" maxOccurs="unbounded" minOccurs="0"/>
+
+</s:sequence>
+
+</s:complexType>
+
+
+<s:complexType name="ZISRFCIMGEQ">
+
+
+<s:complexContent mixed="false">
+
+
+<s:extension base="tns:SAPStructure">
+
+
+<s:sequence>
+
+<s:element name="EQUNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="FOUND_EQ" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="IMG_ACTV" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="EQKTU" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="EQART" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="SYS_STATUS" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="USR_STATUS" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="TPLNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="MSGRP" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="EQFNR" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="NAME1" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="NAME2" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="CITY1" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="STREET" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="POST_CODE1" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="COUNTRY" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="REGION" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="TEL_NUMBER" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+<s:element name="FAX_NUMBER" type="s:string" maxOccurs="1" minOccurs="0" form="unqualified"/>
+
+</s:sequence>
+
+</s:extension>
+
+</s:complexContent>
+
+</s:complexType>
+
+<s:element name="SAPData" type="tns:RFC_Connector" nillable="true"/>
+
+<s:element name="FullSAPData" type="tns:RFC_ConnectorFullOutput" nillable="true"/>
+
+<s:element name="LocationData" type="tns:RFC_LocationData" nillable="true"/>
+
+<s:element name="EquipmentData" type="tns:RFC_EquipmentData" nillable="true"/>
+
+</s:schema>
+
+</wsdl:types>
+
+
+<wsdl:message name="GetSAPWODataSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetSAPWOData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetSAPWODataSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetSAPWODataResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullSAPWODataSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetFullSAPWOData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullSAPWODataSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetFullSAPWODataResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullLocDataSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetFullLocData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullLocDataSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetFullLocDataResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullEQDataSoapIn">
+
+<wsdl:part name="parameters" element="tns:GetFullEQData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullEQDataSoapOut">
+
+<wsdl:part name="parameters" element="tns:GetFullEQDataResponse"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetSAPWODataHttpGetIn">
+
+<wsdl:part name="SAPWONumber" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetSAPWODataHttpGetOut">
+
+<wsdl:part name="Body" element="tns:SAPData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullSAPWODataHttpGetIn">
+
+<wsdl:part name="sOrderNumber" type="s:string"/>
+
+<wsdl:part name="sStartDate" type="s:string"/>
+
+<wsdl:part name="sEndDate" type="s:string"/>
+
+<wsdl:part name="sStartTime" type="s:string"/>
+
+<wsdl:part name="sEndTime" type="s:string"/>
+
+<wsdl:part name="iMaxRecords" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullSAPWODataHttpGetOut">
+
+<wsdl:part name="Body" element="tns:FullSAPData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullLocDataHttpGetIn">
+
+<wsdl:part name="sLocations" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullLocDataHttpGetOut">
+
+<wsdl:part name="Body" element="tns:LocationData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullEQDataHttpGetIn">
+
+<wsdl:part name="sEQs" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullEQDataHttpGetOut">
+
+<wsdl:part name="Body" element="tns:EquipmentData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetSAPWODataHttpPostIn">
+
+<wsdl:part name="SAPWONumber" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetSAPWODataHttpPostOut">
+
+<wsdl:part name="Body" element="tns:SAPData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullSAPWODataHttpPostIn">
+
+<wsdl:part name="sOrderNumber" type="s:string"/>
+
+<wsdl:part name="sStartDate" type="s:string"/>
+
+<wsdl:part name="sEndDate" type="s:string"/>
+
+<wsdl:part name="sStartTime" type="s:string"/>
+
+<wsdl:part name="sEndTime" type="s:string"/>
+
+<wsdl:part name="iMaxRecords" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullSAPWODataHttpPostOut">
+
+<wsdl:part name="Body" element="tns:FullSAPData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullLocDataHttpPostIn">
+
+<wsdl:part name="sLocations" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullLocDataHttpPostOut">
+
+<wsdl:part name="Body" element="tns:LocationData"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullEQDataHttpPostIn">
+
+<wsdl:part name="sEQs" type="s:string"/>
+
+</wsdl:message>
+
+
+<wsdl:message name="GetFullEQDataHttpPostOut">
+
+<wsdl:part name="Body" element="tns:EquipmentData"/>
+
+</wsdl:message>
+
+
+<wsdl:portType name="SAPWOSoap">
+
+
+<wsdl:operation name="GetSAPWOData">
+
+<wsdl:input message="tns:GetSAPWODataSoapIn"/>
+
+<wsdl:output message="tns:GetSAPWODataSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullSAPWOData">
+
+<wsdl:input message="tns:GetFullSAPWODataSoapIn"/>
+
+<wsdl:output message="tns:GetFullSAPWODataSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullLocData">
+
+<wsdl:input message="tns:GetFullLocDataSoapIn"/>
+
+<wsdl:output message="tns:GetFullLocDataSoapOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullEQData">
+
+<wsdl:input message="tns:GetFullEQDataSoapIn"/>
+
+<wsdl:output message="tns:GetFullEQDataSoapOut"/>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+<wsdl:portType name="SAPWOHttpGet">
+
+
+<wsdl:operation name="GetSAPWOData">
+
+<wsdl:input message="tns:GetSAPWODataHttpGetIn"/>
+
+<wsdl:output message="tns:GetSAPWODataHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullSAPWOData">
+
+<wsdl:input message="tns:GetFullSAPWODataHttpGetIn"/>
+
+<wsdl:output message="tns:GetFullSAPWODataHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullLocData">
+
+<wsdl:input message="tns:GetFullLocDataHttpGetIn"/>
+
+<wsdl:output message="tns:GetFullLocDataHttpGetOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullEQData">
+
+<wsdl:input message="tns:GetFullEQDataHttpGetIn"/>
+
+<wsdl:output message="tns:GetFullEQDataHttpGetOut"/>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+<wsdl:portType name="SAPWOHttpPost">
+
+
+<wsdl:operation name="GetSAPWOData">
+
+<wsdl:input message="tns:GetSAPWODataHttpPostIn"/>
+
+<wsdl:output message="tns:GetSAPWODataHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullSAPWOData">
+
+<wsdl:input message="tns:GetFullSAPWODataHttpPostIn"/>
+
+<wsdl:output message="tns:GetFullSAPWODataHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullLocData">
+
+<wsdl:input message="tns:GetFullLocDataHttpPostIn"/>
+
+<wsdl:output message="tns:GetFullLocDataHttpPostOut"/>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullEQData">
+
+<wsdl:input message="tns:GetFullEQDataHttpPostIn"/>
+
+<wsdl:output message="tns:GetFullEQDataHttpPostOut"/>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+<wsdl:binding name="SAPWOSoap" type="tns:SAPWOSoap">
+
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+
+
+<wsdl:operation name="GetSAPWOData">
+
+<soap:operation style="document" soapAction="SAPWO/GetSAPWOData"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullSAPWOData">
+
+<soap:operation style="document" soapAction="SAPWO/GetFullSAPWOData"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullLocData">
+
+<soap:operation style="document" soapAction="SAPWO/GetFullLocData"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullEQData">
+
+<soap:operation style="document" soapAction="SAPWO/GetFullEQData"/>
+
+
+<wsdl:input>
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:binding name="SAPWOSoap12" type="tns:SAPWOSoap">
+
+<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+
+
+<wsdl:operation name="GetSAPWOData">
+
+<soap12:operation style="document" soapAction="SAPWO/GetSAPWOData"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullSAPWOData">
+
+<soap12:operation style="document" soapAction="SAPWO/GetFullSAPWOData"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullLocData">
+
+<soap12:operation style="document" soapAction="SAPWO/GetFullLocData"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullEQData">
+
+<soap12:operation style="document" soapAction="SAPWO/GetFullEQData"/>
+
+
+<wsdl:input>
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:binding name="SAPWOHttpGet" type="tns:SAPWOHttpGet">
+
+<http:binding verb="GET"/>
+
+
+<wsdl:operation name="GetSAPWOData">
+
+<http:operation location="/GetSAPWOData"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullSAPWOData">
+
+<http:operation location="/GetFullSAPWOData"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullLocData">
+
+<http:operation location="/GetFullLocData"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullEQData">
+
+<http:operation location="/GetFullEQData"/>
+
+
+<wsdl:input>
+
+<http:urlEncoded/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:binding name="SAPWOHttpPost" type="tns:SAPWOHttpPost">
+
+<http:binding verb="POST"/>
+
+
+<wsdl:operation name="GetSAPWOData">
+
+<http:operation location="/GetSAPWOData"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullSAPWOData">
+
+<http:operation location="/GetFullSAPWOData"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullLocData">
+
+<http:operation location="/GetFullLocData"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="GetFullEQData">
+
+<http:operation location="/GetFullEQData"/>
+
+
+<wsdl:input>
+
+<mime:content type="application/x-www-form-urlencoded"/>
+
+</wsdl:input>
+
+
+<wsdl:output>
+
+<mime:mimeXml part="Body"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:service name="SAPWO">
+
+
+<wsdl:port name="SAPWOSoap" binding="tns:SAPWOSoap">
+
+<soap:address location="http://stvlsims01v02:8101/SAPWO.asmx"/>
+
+</wsdl:port>
+
+
+<wsdl:port name="SAPWOSoap12" binding="tns:SAPWOSoap12">
+
+<soap12:address location="http://stvlsims01v02:8101/SAPWO.asmx"/>
+
+</wsdl:port>
+
+
+<wsdl:port name="SAPWOHttpGet" binding="tns:SAPWOHttpGet">
+
+<http:address location="http://stvlsims01v02:8101/SAPWO.asmx"/>
+
+</wsdl:port>
+
+
+<wsdl:port name="SAPWOHttpPost" binding="tns:SAPWOHttpPost">
+
+<http:address location="http://stvlsims01v02:8101/SAPWO.asmx"/>
+
+</wsdl:port>
+
+</wsdl:service>
+
+</wsdl:definitions>]]></wsdl_xml>
+    </sys_soap_message>
+</record_update>

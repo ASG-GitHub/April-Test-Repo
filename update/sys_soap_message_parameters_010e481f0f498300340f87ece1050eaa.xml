@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message_parameters">
+    <sys_soap_message_parameters action="INSERT_OR_UPDATE">
+        <name>GetSAPWOData.SAPWONumber</name>
+        <soap_function display_value="SAPWOSoap12.GetSAPWOData">4ccd481f0f498300340f87ece1050e99</soap_function>
+        <sys_class_name>sys_soap_message_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-11 22:38:16</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>010e481f0f498300340f87ece1050eaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetSAPWOData.SAPWONumber</sys_name>
+        <sys_package display_value="Apprentice Tracking Program" source="x_113255_apprentic">754befb90fc10300340f87ece1050e39</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprentice Tracking Program">754befb90fc10300340f87ece1050e39</sys_scope>
+        <sys_update_name>sys_soap_message_parameters_010e481f0f498300340f87ece1050eaa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-11 22:38:16</sys_updated_on>
+        <type>string</type>
+        <value>4788778</value>
+    </sys_soap_message_parameters>
+</record_update>

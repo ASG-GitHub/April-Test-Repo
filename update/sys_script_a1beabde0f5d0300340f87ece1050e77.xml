@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>true</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_113255_apprentic_apprentice_time_sheet</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_113255_apprentic_apprentice_time_sheet">u_craft!=^approverISNOTEMPTY^userISNOTEMPTY^EQ<item endquery="false" field="u_craft" goto="false" newquery="false" operator="!=" or="false" value=""/>
+            <item endquery="false" field="approver" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="false" field="user" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message><![CDATA[<p>Testing testing testing</p>]]></message>
+        <name>Create Task When TimeSheet is Saved</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var recSysChoice = new GlideRecord('sys_choice');
+	
+	recSysChoice.addQuery('name', 'x_113255_apprentic_apprentice_time_card');
+	recSysChoice.addQuery('dependent_value', current.u_craft);
+	recSysChoice.addQuery('element', "task");
+	recSysChoice.addQuery('inactive', false);
+	recSysChoice.query();
+
+	while (recSysChoice.next()) {
+		var gr = new GlideRecord('x_113255_apprentic_apprentice_time_card');
+		gr.initialize();
+		gr.time_sheet = current.sys_id;
+		gr.task = recSysChoice.label;
+		gr.insert();
+	}
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-21 22:47:01</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a1beabde0f5d0300340f87ece1050e77</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Create Task When TimeSheet is Saved</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apprentice Tracking Program" source="x_113255_apprentic">754befb90fc10300340f87ece1050e39</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprentice Tracking Program">754befb90fc10300340f87ece1050e39</sys_scope>
+        <sys_update_name>sys_script_a1beabde0f5d0300340f87ece1050e77</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-22 03:02:35</sys_updated_on>
+        <template>state=Pending^EQ</template>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=a1beabde0f5d0300340f87ece1050e77"/>
+</record_update>

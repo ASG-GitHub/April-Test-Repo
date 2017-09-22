@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message_function">
+    <sys_soap_message_function action="INSERT_OR_UPDATE">
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <certificate/>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <envelope><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ss="http://sesoams1:8100/SS">
+   <soap:Header/>
+   <soap:Body>
+      <ss:GetGroupList>
+         <!--Optional:-->
+         <ss:sFilter>${GetGroupList.sFilter}</ss:sFilter>
+      </ss:GetGroupList>
+   </soap:Body>
+</soap:Envelope>]]></envelope>
+        <function_name>SSSoap12.GetGroupList</function_name>
+        <key_store/>
+        <key_store_alias/>
+        <key_store_password/>
+        <lock>false</lock>
+        <protocol_profile/>
+        <qualified_name>April TEST - AD Group Users [ SSSoap12.GetGroupList ]</qualified_name>
+        <soap_action>http://sesoams1:8100/SS/GetGroupList</soap_action>
+        <soap_endpoint>http://spbotims01v02:8100/SS.asmx</soap_endpoint>
+        <soap_message display_value="April TEST - AD Group Users">49e7445b0f498300340f87ece1050e50</soap_message>
+        <strip_whitespace>false</strip_whitespace>
+        <sys_class_name>sys_soap_message_function</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-11 22:24:22</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>afda8c9b0f498300340f87ece1050ef1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>SSSoap12.GetGroupList</sys_name>
+        <sys_package display_value="Apprentice Tracking Program" source="x_113255_apprentic">754befb90fc10300340f87ece1050e39</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprentice Tracking Program">754befb90fc10300340f87ece1050e39</sys_scope>
+        <sys_update_name>sys_soap_message_function_afda8c9b0f498300340f87ece1050ef1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-11 22:59:28</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_ws_security>false</use_ws_security>
+        <ws_security_type/>
+        <ws_security_username_profile/>
+        <ws_security_x509_profile/>
+    </sys_soap_message_function>
+</record_update>

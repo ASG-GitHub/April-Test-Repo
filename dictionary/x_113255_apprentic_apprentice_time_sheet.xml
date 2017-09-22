@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Apprentice Time Sheet" max_length="40" name="x_113255_apprentic_apprentice_time_sheet" type="collection">
+        <element label="Approver" mandatory="true" max_length="20" name="approver" read_only="true" type="string"/>
+        <element label="Comments" max_length="4000" name="comments" type="string"/>
+        <element label="Location" max_length="20" name="location" type="string"/>
+        <element label="Notes" max_length="4000" name="notes" type="journal"/>
+        <element choice="3" label="Report Month" mandatory="true" max_length="10" name="report_month" type="choice">
+            <choice>
+                <element label="January" sequence="1" value="1"/>
+                <element label="February" sequence="2" value="2"/>
+                <element label="March" sequence="3" value="3"/>
+                <element label="April" sequence="4" value="4"/>
+                <element label="May" sequence="5" value="5"/>
+                <element label="June" sequence="6" value="6"/>
+                <element label="July" sequence="7" value="7"/>
+                <element label="August" sequence="8" value="8"/>
+                <element label="September" sequence="9" value="9"/>
+                <element label="October" sequence="10" value="10"/>
+                <element label="November" sequence="11" value="11"/>
+                <element label="December" sequence="12" value="12"/>
+            </choice>
+        </element>
+        <element label="Report Year" mandatory="true" max_length="4" name="report_year" type="string"/>
+        <element choice="3" default="New" label="State" mandatory="true" max_length="40" name="state" read_only="true" type="string">
+            <choice>
+                <element label="New" sequence="0" value="New"/>
+                <element label="Pending" sequence="1" value="Pending"/>
+                <element label="Submitted" sequence="2" value="Submitted"/>
+                <element label="Approved" sequence="3" value="Approved"/>
+                <element label="Rejected" sequence="3" value="Rejected"/>
+            </choice>
+        </element>
+        <element label="Title" max_length="20" name="title" type="string"/>
+        <element default="0" label="Total Hours" mandatory="true" max_length="15" name="total_hours" read_only="true" type="decimal"/>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="User Name" mandatory="true" max_length="32" name="user" reference="sys_user" reference_qual="roles=timecard_user^EQ" reference_qual_condition="roles=timecard_user^EQ" type="reference" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="CT" label="Craft" mandatory="true" max_length="40" name="u_craft" type="string">
+            <choice>
+                <element label="CT" sequence="0" value="CT"/>
+                <element label="Meterman" sequence="1" value="Meterman"/>
+                <element label="Wireman" sequence="2" value="Wireman"/>
+                <element label="RSI" sequence="3" value="RSI"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>
